@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Machine Learning Model</title>
+  </head>
+  <style>
+    body {
+      background-image: url("../images/heart_pic.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    #formid {
+      /* background-color: red; */
+      backdrop-filter: blur(5px);
+      margin: 0 20vw 0 20vw;
+    }
+    .intf {
+      width: 50%;
+      padding: 12px 20px;
+      margin: 6px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: 20%;
+      background-color: #4caf50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #3e9143;
+    }
+  </style>
+  <body>
+    <center>
+      <form method="POST" id="formid">
+        <h1 style="color: white">HEART DISEASE PREDICTION</h1>
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="age"
+          ,
+          placeholder="age in years (between 18 and 100)"
+          ,
+          min="18"
+          ,
+          max="100"
+          ,
+          required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="sex"
+          ,
+          placeholder="Sex (1 = male; 0 = female)"
+          ,
+          min="0"
+          ,
+          max="1"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="cp"
+          ,
+          placeholder="chest pain type (between 0 or 3)"
+          ,min="0"
+          ,max="3"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="trestbps"
+          ,
+          placeholder="resting blood pressure in mm Hg (between 94 and 200)"
+          ,min="94"
+          ,max="200"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="chol"
+          ,
+          placeholder="serum cholestoral in mg/dl (between 126 and 564)"
+          ,min="126"
+          ,max="564"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="fbs"
+          ,
+          placeholder="fasting blood sugar m(80,100)m mg/dl (1 = true, 0 = false)"
+          ,min="0"
+          ,max="1"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="restecg"
+          ,
+          placeholder="resting electrocardiographic results between (0 or 2)"
+          ,min="0"
+          ,max="2"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="thalach"
+          ,
+          placeholder="maximum heart rate achieved (between 71 or 202)"
+          ,min="71"
+          ,
+          max="202"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="exang"
+          ,
+          placeholder="exercise induced angina (1 = yes; 0 = no)"
+          ,min="0"
+          ,max="1"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="oldpeak"
+          ,
+          placeholder="ST depression exercise relative to rest (between 0 and 6.2)"
+          ,min="0"
+          ,max="6"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="slope"
+          ,
+          placeholder="the slope of the peak exercise ST segment (0 or 2)"
+          ,min="0"
+          ,
+          max="2"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="ca"
+          ,
+          placeholder="number of major vessels colored by flourosopy (between 0 or 4)"
+          ,min="0"
+          ,max="4"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="thal"
+          ,
+          placeholder="thal (between 0 and 3)"
+          ,min="0"
+          ,max="3"
+          ,required
+        />
+        <br /><br /><br />
+        <input type="submit" value="Predict" />
+      </form>
+    </center>
+  </body>
+</html>

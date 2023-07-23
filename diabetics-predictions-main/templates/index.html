@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Machine Learning Model</title>
+  </head>
+  <style>
+    body {
+      background-image: url("../images/heart_pic.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    #formid {
+      /* background-color: red; */
+      backdrop-filter: blur(5px);
+      margin: 0 20vw 0 20vw;
+    }
+    .intf {
+      width: 50%;
+      padding: 12px 20px;
+      margin: 6px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: 20%;
+      background-color: #4caf50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #3e9143;
+    }
+    *{
+    margin:0;
+    padding:0;
+    }
+  </style>
+  <body>
+    <center>
+      <h1 >Diabetics Prediction </h1>
+      <form method="POST" id="formid">
+        <h1 style="color: white">HEART DISEASE PREDICTION</h1>
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="Age"
+          ,
+          placeholder="Age"
+          ,
+          min="18"
+          ,
+          max="100"
+          ,
+          required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="Pregnancies"
+          ,
+          placeholder="Pregnancies"
+          ,
+          min="0"
+          ,
+          max="12"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="Glucose"
+          ,
+          placeholder="Glucose"
+          ,min="80"
+          ,max="200"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="BloodPressure"
+          ,
+          placeholder="BloodPressure"
+          ,min="94"
+          ,max="200"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="SkinThickness"
+          ,
+          placeholder="SkinThickness"
+          ,min="10"
+          ,max="50"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="Insulin"
+          ,
+          placeholder="Insulin"
+          ,min="0"
+          ,max="1000"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="BMI"
+          ,
+          placeholder="BMI"
+          ,min="0"
+          ,max="50"
+          ,required
+        />
+        <br /><br />
+        <input
+          type="number"
+          ,
+          class="intf"
+          ,
+          name="DiabetesPedigreeFunction"
+          ,
+          placeholder="DiabetesPedigreeFunction"
+          ,min="0"
+          ,max="2"
+          ,required
+        />
+        <br /><br />
+        <br />
+        <input type="submit" value="Predict" />
+      </form>
+    </center>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!-- #include <bits/stdc++.h>
+using namespace std;
+int main() {
+	string s;cin>>s;
+	vector<string>val;
+	vector<string>fr{"age","sex","cp","trestbps","chol","fbs","restecg","thalach","exang","oldpeak","slope","ca","thal"};
+	string temp;
+	for(int i=0;i<s.size();i++){
+		if(i==s.size()-1){
+			temp+=s[i];
+			val.push_back(temp);
+		}
+		else{
+			if(s[i]!=','){
+				temp+=s[i];
+			}else{
+				val.push_back(temp);
+				temp="";
+			}
+		}
+	}
+	cout<<"http://127.0.0.1:5000/after?";
+	for(int i=0;i<fr.size();i++){
+		if(i!=fr.size()-1) cout<<fr[i]<<"="<<val[i]<<"&";
+		else cout<<fr[i]<<"="<<val[i];
+	}
+	return 0;
+} -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prediction</title>
+    <style>
+
+      .safe{
+        background-color:green;
+      }
+    </style>
+  </head>
+  <body>
+     <div class={`${res && "safe"}}>
+       <h1>Result Page</h1>
+
+    {% if res == 0 %}
+        <p>The RESULT is SAFE.</p>
+    {% elif res == 1 %}
+        <p>The RESULT is NOT SAFE.</p>
+    {% else %}
+        <p>The value of 'res' is neither 0 nor 1.</p>
+    {% endif %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!-- #include <bits/stdc++.h>
+using namespace std;
+int main() {
+	string s;cin>>s;
+	vector<string>val;
+	vector<string>fr{"age","sex","cp","trestbps","chol","fbs","restecg","thalach","exang","oldpeak","slope","ca","thal"};
+	string temp;
+	for(int i=0;i<s.size();i++){
+		if(i==s.size()-1){
+			temp+=s[i];
+			val.push_back(temp);
+		}
+		else{
+			if(s[i]!=','){
+				temp+=s[i];
+			}else{
+				val.push_back(temp);
+				temp="";
+			}
+		}
+	}
+	cout<<"http://127.0.0.1:5000/after?";
+	for(int i=0;i<fr.size();i++){
+		if(i!=fr.size()-1) cout<<fr[i]<<"="<<val[i]<<"&";
+		else cout<<fr[i]<<"="<<val[i];
+	}
+	return 0;
+} -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prediction</title>
+    <style>
+      /* a{
+        color: red;
+      }*/
+      /* a:visited{
+        color: green;
+      } */
+      ol{
+        background-color: rgb(0, 184, 0);
+        padding:2vh 2vw 2vh 2vw ;
+        border-radius: 5px;
+      }
+      li{
+        text-align: left;
+        letter-spacing:1px;
+      }
+      a{
+        color: black;
+        text-decoration: none;
+      }
+      a:hover{
+        font-weight: bold;
+        color: white;
+      }
+        .res1{
+            font-size: 50px;
+        }
+        .res2{
+            font-size: 50px;
+        }
+        .cont1{
+            background-color: rgb(229, 216, 252);
+            padding: 10px;
+            margin: 32vh 30vw 0vh 30vw;
+            border-radius: 10px;
+        }
+        .cont2{
+            background-color: rgb(229, 216, 252);
+            padding: 10vh;
+            margin: 5vh 30vw 0vh 30vw;
+            border-radius: 10px;
+        }
+      {% if prediction == "0" %}
+          body {
+              background-color: green;
+          }
+          .res1{
+            color:green;
+          }
+      {% else %}
+          {%if thal=="3" %}
+          body {
+              background-color: green;
+          }
+          .res1{
+            color:green;
+          }
+          {%else%}
+          body {
+              background-color: rgb(226, 4, 4);
+          }
+          .res2{
+            color: red;
+          }
+          {% endif %}
+      {% endif %}
+    </style>
+  </head>
+  <body>
+    <div>
+       <h1>Result Page</h1>
+
+    {% if res == 0 %}
+        <p>The RESULT is SAFE.</p>
+    {% elif res == 1 %}
+        <p>The RESULT is NOT SAFE.</p>
+    {% else %}
+        <p>The value of 'res' is neither 0 nor 1.</p>
+    {% endif %}
+    </div>
+  </body>
+</html>
